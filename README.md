@@ -1,1 +1,4 @@
 # Assignment5
+
+My approach involves iterating through the dictionary word by word. For each word the first letter will be linked to that of the next one and what's left of the word (characters from 1 to word.length() will be added in the extra collection since we don't have any information about where they should be placed in the dictionary). Next, if two words happen to have the same prefix, we seek to link them in the correct position: from the letters HashMap I take the node or cell along with its left and right neighbours and update them accordingly. Say we have A <-> R <-> C and want to put T before R because that's what we found out from the example (RAT, CAT, CAR). I take the node R, update its left link, node's A right link and the result is A <-> T <-> R <-> C.
+I think the overall complexity is O(n) since I olny iterate through the dictionary once and when I am accesing elements from the HashMap in order to update them this is done in O(1).
